@@ -3,6 +3,6 @@ module one_bit_full_adder(A, B, Cin, S, Cout);
     output reg S, Cout;
 
     always @(*) begin
-        {Cout, S} = A + B + Cin;
+        assign {Cout, S} = A + B + Cin;
     end
 endmodule
