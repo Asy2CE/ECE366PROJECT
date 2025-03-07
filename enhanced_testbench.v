@@ -5,7 +5,7 @@ module tb_cla_32bit;
   wire        Cout;
 
   // Instantiate 32-bit CLA
-  cla_32bit dut (
+  CLA dut (
     .A   (A),
     .B   (B),
     .Cin (Cin),
