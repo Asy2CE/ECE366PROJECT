@@ -12,7 +12,10 @@ module tb_four_bit_RCA_RCS;
         .S(S),
         .Cout(Cout)
     );
-
+    initial begin
+        $dumpfile("dump.vcd");            
+        $dumpvars(0, tb_four_bit_RCA_RCS);          
+    end
     initial begin
         // Unsigned addition example
         A   = 4'b0011; // 3
