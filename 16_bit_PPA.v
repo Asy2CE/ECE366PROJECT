@@ -28,6 +28,7 @@ module prefix_adder_16bit (
     assign C[13] = G[13] | (P[13] & C[12]);
     assign C[14] = G[14] | (P[14] & C[13]);
     assign C[15] = G[15] | (P[15] & C[14]);
+    assign Cout = G[15] | (P[15] & C[15]);
 
     assign S[0]  = (A[0]  ^ B[0])  ^ Cin;
     assign S[1]  = (A[1]  ^ B[1])  ^ C[0];
@@ -45,6 +46,6 @@ module prefix_adder_16bit (
     assign S[13] = (A[13] ^ B[13]) ^ C[12];
     assign S[14] = (A[14] ^ B[14]) ^ C[13];
     assign S[15] = (A[15] ^ B[15]) ^ C[14];
-    assign Cout = C[15];
+    
 
 endmodule
